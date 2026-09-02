@@ -149,14 +149,29 @@ To enable consistent cross-district peer-group comparison and anomaly detection,
 
 | Category Name | Typical Scope | Median Estimate (INR) | Typical Duration |
 | :--- | :--- | :--- | :--- |
-| **Drinking Water** | RO plants, piped water schemes, deep borewells with solar pumps | ₹5,00,000 | 120 days |
-| **Education Infrastructure** | Smart classrooms, STEM labs, school toilet blocks, library halls | ₹15,00,000 | 210 days |
-| **Health & Sanitation** | Primary health sub-centres, bio-toilets, solid waste management units | ₹12,00,000 | 180 days |
-| **Roads, Pathways & Bridges** | Cement concrete roads, bitumen link roads, RCC box culverts | ₹25,00,000 | 270 days |
-| **Community Infrastructure & Halls** | Panchayat sabha bhawans, community halls, crematorium sheds | ₹20,00,000 | 240 days |
-| **Irrigation & Flood Control** | Check dams, percolation tanks, canal lining, flood protection walls | ₹18,00,000 | 240 days |
-| **Renewable & Solar Energy** | High-mast solar lights, micro-grids, solar agricultural pump systems | ₹8,00,000 | 90 days |
-| **Sports & Youth Development** | Outdoor stadiums, synthetic courts, open gyms, skill training centres | ₹14,00,000 | 180 days |
+| **Drinking Water** | RO plants, piped water schemes, deep borewells with solar pumps | ₹5,00,000 (₹5 Lakhs) | 120 days |
+| **Education Infrastructure** | Smart classrooms, STEM labs, school toilet blocks, library halls | ₹15,00,000 (₹15 Lakhs) | 210 days |
+| **Health & Sanitation** | Primary health sub-centres, bio-toilets, solid waste management units | ₹12,00,000 (₹12 Lakhs) | 180 days |
+| **Roads, Pathways & Bridges** | Cement concrete roads, bitumen link roads, RCC box culverts | ₹25,00,000 (₹25 Lakhs) | 270 days |
+| **Community Infrastructure & Halls** | Panchayat sabha bhawans, community halls, crematorium sheds | ₹20,00,000 (₹20 Lakhs) | 240 days |
+| **Irrigation & Flood Control** | Check dams, percolation tanks, canal lining, flood protection walls | ₹18,00,000 (₹18 Lakhs) | 240 days |
+| **Renewable & Solar Energy** | High-mast solar lights, micro-grids, solar agricultural pump systems | ₹8,00,000 (₹8 Lakhs) | 90 days |
+| **Sports & Youth Development** | Outdoor stadiums, synthetic courts, open gyms, skill training centres | ₹14,00,000 (₹14 Lakhs) | 180 days |
+
+---
+
+### Indian Currency Conventions & Numbering Format
+All financial fields (`estimate_amount`, `sanctioned_amount`, `cumulative_payments`, `expenditure`, `amount`) are stored as IEEE floating-point numbers representing **Indian National Rupees (INR / ₹)**.
+
+- **Indian Comma Grouping**: Formatted as `₹ [Crores],[Lakhs],[Thousands],[Hundreds].[Paise]` (e.g., `₹ 1,85,00,000.00` = ₹1.85 Crore; `₹ 25,00,000.00` = ₹25 Lakh).
+- **Accepted CSV Upload Notations**: The ingestion mapper automatically recognizes and converts Indian currency units:
+  - `₹ 1.50 Crore` / `1.5 Cr` $\to$ `15000000.00`
+  - `₹ 25 Lakhs` / `25 Lakh` / `25 Lacs` $\to$ `2500000.00`
+  - `₹ 50 Thousand` / `50k` $\to$ `50000.00`
+  - Standard grouped strings e.g. `₹ 15,00,000.00` / `Rs. 15,00,000` $\to$ `1500000.00`
+
+---
+
 
 ---
 

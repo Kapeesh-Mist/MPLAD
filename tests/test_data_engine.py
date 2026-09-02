@@ -283,6 +283,28 @@ class TestIngestionMapperAndBackendServices(unittest.TestCase):
         self.assertEqual(mapped["longitude"], 73.8567)
         self.assertTrue(mapped["synthetic_demo_data"])
 
+    def test_indian_rupee_formatting_and_units(self):
+        """Verify that Indian Rupee formatting and Lakh/Crore strings work properly."""
+        from data.synthetic_generator.constants import format_inr, format_inr_words
+        mapper = IngestionMapper()
+
+        # Test format_inr
+        self.assertEqual(format_inr(500000), "₹ 5,00,000.00")
+        self.assertEqual(format_inr(18500000), "₹ 1,85,00,000.00")
+        self.assertEqual(format_inr(2500000, include_decimals=False), "₹ 25,00,000")
+
+        # Test format_inr_words
+        self.assertEqual(format_inr_words(18500000), "₹ 1.85 Cr")
+        self.assertEqual(format_inr_words(2500000), "₹ 25.00 Lakh")
+        self.assertEqual(format_inr_words(50000), "₹ 50.0k")
+
+        # Test mapper parsing Indian currency strings
+        self.assertEqual(mapper._clean_numeric("₹ 25 Lakhs"), 2500000.0)
+        self.assertEqual(mapper._clean_numeric("₹ 1.50 Crore"), 15000000.0)
+        self.assertEqual(mapper._clean_numeric("₹ 50 Thousand"), 50000.0)
+        self.assertEqual(mapper._clean_numeric("Rs. 12,50,000"), 1250000.0)
+
+
     def test_data_ingestion_service(self):
         service = DataIngestionService()
         csv_content = """Work ID,State,District,Constituency,MP_Reference,Work Title,Category,Agency,Status,Estimate (Rs),Sanction (Rs),Payments (Rs),Expenditure (Rs),Progress %,Recommendation Date,Sanction Date,Lat,Lon

@@ -2,9 +2,9 @@
   "validation_report_version": "1.0.0",
   "synthetic_demo_data": true,
   "metadata": {
-    "batch_id": "BATCH-20260902-094447",
+    "batch_id": "BATCH-20260902-095145",
     "source_filename": "clean_mplads_demo.csv",
-    "generated_at": "2026-09-02T09:44:47Z",
+    "generated_at": "2026-09-02T09:51:45Z",
     "status": "PASSED"
   },
   "summary": {

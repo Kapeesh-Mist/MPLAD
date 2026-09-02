@@ -65,13 +65,29 @@ class IngestionMapper:
     def _clean_numeric(val: Any) -> Optional[float]:
         if val is None or str(val).strip() == "" or str(val).lower() in ["none", "null", "nan", "-"]:
             return 0.0
-        # Remove currency words (INR, Rs, Rs.), symbols (₹), commas, percent signs, and whitespace
-        val_str = str(val).strip()
-        cleaned = re.sub(r"(?i)\b(inr|rs\.?)\b|[₹,%]|\s", "", val_str)
+        val_str = str(val).strip().lower()
+        
+        # Parse Indian currency units (Crores, Lakhs, Thousands)
+        multiplier = 1.0
+        if re.search(r"(?:\bcrores?\b|\bcr\b)", val_str):
+            multiplier = 10_000_000.0
+            val_str = re.sub(r"(?:\bcrores?\b|\bcr\b)", "", val_str)
+        elif re.search(r"(?:\blakhs?\b|\blacs?\b)", val_str):
+            multiplier = 100_000.0
+            val_str = re.sub(r"(?:\blakhs?\b|\blacs?\b)", "", val_str)
+        elif re.search(r"(?:\bthousands?\b|\bk\b)", val_str):
+            multiplier = 1_000.0
+            val_str = re.sub(r"(?:\bthousands?\b|\bk\b)", "", val_str)
+
+        # Remove currency indicators (INR, Rs, Rs.), symbols (₹), commas, percent signs, and whitespace
+        cleaned = re.sub(r"(?:inr|rs\.?|[₹,%]|\s)", "", val_str)
         try:
-            return float(cleaned)
+            return float(cleaned) * multiplier
         except ValueError:
             return None
+
+
+
 
 
     @staticmethod

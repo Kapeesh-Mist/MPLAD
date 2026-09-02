@@ -8,10 +8,26 @@ import random
 from datetime import datetime, timedelta
 
 try:
-    from .constants import CATEGORIES, CATEGORY_BENCHMARKS, STATUS_COMPLETED, STATUS_IN_PROGRESS, STATUS_STALLED
+    from .constants import (
+        CATEGORIES,
+        CATEGORY_BENCHMARKS,
+        STATUS_COMPLETED,
+        STATUS_IN_PROGRESS,
+        STATUS_STALLED,
+        format_inr,
+        format_inr_words,
+    )
     from .schemas import WorkRecord, PaymentRecord, ProgressUpdateRecord, InspectionRecord, AssetRecord
 except (ImportError, ValueError):
-    from constants import CATEGORIES, CATEGORY_BENCHMARKS, STATUS_COMPLETED, STATUS_IN_PROGRESS, STATUS_STALLED
+    from constants import (
+        CATEGORIES,
+        CATEGORY_BENCHMARKS,
+        STATUS_COMPLETED,
+        STATUS_IN_PROGRESS,
+        STATUS_STALLED,
+        format_inr,
+        format_inr_words,
+    )
     from schemas import WorkRecord, PaymentRecord, ProgressUpdateRecord, InspectionRecord, AssetRecord
 
 
@@ -63,7 +79,7 @@ def inject_payment_progress_mismatch(
     work["anomaly_type"] = AnomalyType.PAYMENT_PROGRESS_MISMATCH
     work["anomaly_description"] = (
         f"Severe financial-physical divergence: {round(mismatch_pay_pct*100, 1)}% of sanctioned funds "
-        f"(Rs. {total_paid:,.2f}) disbursed while physical progress is only {low_progress}%."
+        f"({format_inr(total_paid)}) disbursed while physical progress is only {low_progress}%."
     )
 
 
@@ -94,9 +110,10 @@ def inject_cost_outlier(
     work["is_anomaly"] = True
     work["anomaly_type"] = AnomalyType.COST_OUTLIER
     work["anomaly_description"] = (
-        f"Cost outlier: Sanctioned amount of Rs. {inflated_sanction:,.2f} is {multiplier:.1f}x higher "
-        f"than standard category median benchmark of Rs. {benchmark['median_cost']:,.2f} for '{category}'."
+        f"Cost outlier: Sanctioned amount of {format_inr(inflated_sanction)} ({format_inr_words(inflated_sanction)}) is {multiplier:.1f}x higher "
+        f"than standard category median benchmark of {format_inr(benchmark['median_cost'])} ({format_inr_words(benchmark['median_cost'])}) for '{category}'."
     )
+
 
 
 def inject_stalled_work(

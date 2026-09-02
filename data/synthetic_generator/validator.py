@@ -18,6 +18,8 @@ try:
         STATUS_WORK_ORDER,
         STATUS_IN_PROGRESS,
         STATUS_STALLED,
+        format_inr,
+        format_inr_words,
     )
     from .schemas import ValidationIssue, ValidationSummary
 except (ImportError, ValueError):
@@ -30,8 +32,11 @@ except (ImportError, ValueError):
         STATUS_WORK_ORDER,
         STATUS_IN_PROGRESS,
         STATUS_STALLED,
+        format_inr,
+        format_inr_words,
     )
     from schemas import ValidationIssue, ValidationSummary
+
 
 
 
@@ -189,7 +194,7 @@ class MPLADSDataValidator:
                         "DATA_QUALITY_ISSUE",
                         ValidationRuleCode.DQ_NEGATIVE_AMOUNT,
                         "ERROR",
-                        f"Financial field '{f}' contains negative amount: Rs. {val_float:,.2f}.",
+                        f"Financial field '{f}' contains negative amount: {format_inr(val_float)}.",
                         val_float,
                         "Amount >= 0.0",
                     )
@@ -216,10 +221,11 @@ class MPLADSDataValidator:
                 "COMPLIANCE_RULE_VIOLATION",
                 ValidationRuleCode.RULE_PAYMENTS_EXCEED_SANCTION,
                 "ERROR",
-                f"Cumulative payments (Rs. {cumulative_pay:,.2f}) exceed sanctioned budget (Rs. {sanctioned:,.2f}).",
+                f"Cumulative payments ({format_inr(cumulative_pay)}) exceed sanctioned budget ({format_inr(sanctioned)}).",
                 cumulative_pay,
-                f"Cumulative payments <= sanctioned amount (Rs. {sanctioned:,.2f})",
+                f"Cumulative payments <= sanctioned amount ({format_inr(sanctioned)})",
             )
+
 
         # 6. Physical Progress: 0 to 100%
         raw_progress = record.get("physical_progress_pct")

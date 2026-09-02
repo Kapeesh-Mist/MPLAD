@@ -8,7 +8,60 @@ from typing import Dict, List, Tuple, Any
 # Mandatory metadata flag
 SYNTHETIC_FLAG: bool = True
 
+def format_inr(amount: float, include_symbol: bool = True, include_decimals: bool = True) -> str:
+    """
+    Formats a numeric amount into standard Indian Rupee notation with Lakhs and Crores separators:
+    e.g., 500000 -> "₹ 5,00,000.00", 18500000 -> "₹ 1,85,00,000.00"
+    """
+    if amount is None:
+        return "₹ 0.00" if include_symbol else "0.00"
+    is_negative = amount < 0
+    amount = abs(amount)
+    parts = f"{amount:.2f}".split(".")
+    integer_part = parts[0]
+    decimal_part = parts[1]
+    
+    if len(integer_part) <= 3:
+        formatted_int = integer_part
+    else:
+        last_three = integer_part[-3:]
+        remaining = integer_part[:-3]
+        groups = []
+        while remaining:
+            groups.append(remaining[-2:])
+            remaining = remaining[:-2]
+        groups.reverse()
+        formatted_int = ",".join(groups) + "," + last_three
+        
+    res = f"{formatted_int}.{decimal_part}" if include_decimals else formatted_int
+    if is_negative:
+        res = f"-{res}"
+    return f"₹ {res}" if include_symbol else res
+
+def format_inr_words(amount: float) -> str:
+    """
+    Formats a numeric amount into standard Indian Lakhs / Crores units:
+    e.g., 18500000 -> "₹ 1.85 Cr", 2500000 -> "₹ 25.00 Lakh", 500000 -> "₹ 5.00 Lakh"
+    """
+    if amount is None or amount == 0:
+        return "₹ 0"
+    is_neg = amount < 0
+    abs_amt = abs(amount)
+    prefix = "-" if is_neg else ""
+    if abs_amt >= 10_000_000:
+        cr = abs_amt / 10_000_000
+        return f"{prefix}₹ {cr:.2f} Cr"
+    elif abs_amt >= 100_000:
+        lakh = abs_amt / 100_000
+        return f"{prefix}₹ {lakh:.2f} Lakh"
+    elif abs_amt >= 1_000:
+        k = abs_amt / 1_000
+        return f"{prefix}₹ {k:.1f}k"
+    else:
+        return f"{prefix}₹ {abs_amt:.2f}"
+
 # Standard Categories for MPLADS peer-group analysis
+
 CATEGORIES: List[str] = [
     "Drinking Water",
     "Education Infrastructure",

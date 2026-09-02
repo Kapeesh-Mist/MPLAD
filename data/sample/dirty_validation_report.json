@@ -2,9 +2,9 @@
   "validation_report_version": "1.0.0",
   "synthetic_demo_data": true,
   "metadata": {
-    "batch_id": "BATCH-20260902-094448",
+    "batch_id": "BATCH-20260902-095145",
     "source_filename": "dirty_mplads_demo.csv",
-    "generated_at": "2026-09-02T09:44:48Z",
+    "generated_at": "2026-09-02T09:51:45Z",
     "status": "FAILED_VALIDATION"
   },
   "summary": {
@@ -116,9 +116,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 1,854,055.54) exceed sanctioned budget (Rs. 1,278,658.99).",
+      "message": "Cumulative payments (₹ 18,54,055.54) exceed sanctioned budget (₹ 12,78,658.99).",
       "invalid_value": "1854055.54",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 1,278,658.99)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 12,78,658.99)"
     },
     {
       "issue_id": "ISSUE-ROW342-1",
@@ -260,7 +260,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -5,045,486.84.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -50,45,486.84.",
       "invalid_value": "-5045486.84",
       "expected_condition": "Amount >= 0.0"
     },
@@ -560,7 +560,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,868,065.72.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -28,68,065.72.",
       "invalid_value": "-2868065.72",
       "expected_condition": "Amount >= 0.0"
     },
@@ -656,9 +656,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 3,046,832.74) exceed sanctioned budget (Rs. 2,101,263.96).",
+      "message": "Cumulative payments (₹ 30,46,832.74) exceed sanctioned budget (₹ 21,01,263.96).",
       "invalid_value": "3046832.74",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 2,101,263.96)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 21,01,263.96)"
     },
     {
       "issue_id": "ISSUE-ROW2210-1",
@@ -704,7 +704,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,486,973.28.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -14,86,973.28.",
       "invalid_value": "-1486973.28",
       "expected_condition": "Amount >= 0.0"
     },
@@ -884,9 +884,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 2,719,473.81) exceed sanctioned budget (Rs. 1,875,499.18).",
+      "message": "Cumulative payments (₹ 27,19,473.81) exceed sanctioned budget (₹ 18,75,499.18).",
       "invalid_value": "2719473.81",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 1,875,499.18)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 18,75,499.18)"
     },
     {
       "issue_id": "ISSUE-ROW2878-1",
@@ -1016,7 +1016,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,252,604.14.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -12,52,604.14.",
       "invalid_value": "-1252604.14",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1100,7 +1100,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,790,700.23.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -27,90,700.23.",
       "invalid_value": "-2790700.23",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1136,7 +1136,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,190,602.43.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -21,90,602.43.",
       "invalid_value": "-2190602.43",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1520,9 +1520,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 2,192,773.32) exceed sanctioned budget (Rs. 1,512,257.46).",
+      "message": "Cumulative payments (₹ 21,92,773.32) exceed sanctioned budget (₹ 15,12,257.46).",
       "invalid_value": "2192773.32",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 1,512,257.46)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 15,12,257.46)"
     },
     {
       "issue_id": "ISSUE-ROW5483-1",
@@ -1544,7 +1544,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,951,950.92.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -19,51,950.92.",
       "invalid_value": "-1951950.92",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1652,7 +1652,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,170,586.61.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -21,70,586.61.",
       "invalid_value": "-2170586.61",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1664,7 +1664,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -799,612.81.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -7,99,612.81.",
       "invalid_value": "-799612.81",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1724,9 +1724,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 2,205,442.60) exceed sanctioned budget (Rs. 1,520,994.90).",
+      "message": "Cumulative payments (₹ 22,05,442.60) exceed sanctioned budget (₹ 15,20,994.90).",
       "invalid_value": "2205442.6",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 1,520,994.90)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 15,20,994.90)"
     },
     {
       "issue_id": "ISSUE-ROW5969-1",
@@ -1748,7 +1748,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,980,260.19.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -29,80,260.19.",
       "invalid_value": "-2980260.19",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1760,7 +1760,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -383,483.18.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -3,83,483.18.",
       "invalid_value": "-383483.18",
       "expected_condition": "Amount >= 0.0"
     },
@@ -1772,9 +1772,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 3,314,421.02) exceed sanctioned budget (Rs. 2,285,807.60).",
+      "message": "Cumulative payments (₹ 33,14,421.02) exceed sanctioned budget (₹ 22,85,807.60).",
       "invalid_value": "3314421.02",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 2,285,807.60)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 22,85,807.60)"
     },
     {
       "issue_id": "ISSUE-ROW6106-1",
@@ -1868,9 +1868,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 709,195.57) exceed sanctioned budget (Rs. 489,100.39).",
+      "message": "Cumulative payments (₹ 7,09,195.57) exceed sanctioned budget (₹ 4,89,100.39).",
       "invalid_value": "709195.57",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 489,100.39)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 4,89,100.39)"
     },
     {
       "issue_id": "ISSUE-ROW6368-1",
@@ -1964,7 +1964,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,759,341.57.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -17,59,341.57.",
       "invalid_value": "-1759341.57",
       "expected_condition": "Amount >= 0.0"
     },
@@ -2156,7 +2156,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,412,055.44.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -14,12,055.44.",
       "invalid_value": "-1412055.44",
       "expected_condition": "Amount >= 0.0"
     },
@@ -2240,9 +2240,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 1,114,485.60) exceed sanctioned budget (Rs. 768,610.76).",
+      "message": "Cumulative payments (₹ 11,14,485.60) exceed sanctioned budget (₹ 7,68,610.76).",
       "invalid_value": "1114485.6",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 768,610.76)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 7,68,610.76)"
     },
     {
       "issue_id": "ISSUE-ROW7451-1",
@@ -2312,7 +2312,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -472,782.31.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -4,72,782.31.",
       "invalid_value": "-472782.31",
       "expected_condition": "Amount >= 0.0"
     },
@@ -2348,7 +2348,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,189,968.46.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -21,89,968.46.",
       "invalid_value": "-2189968.46",
       "expected_condition": "Amount >= 0.0"
     },
@@ -2432,9 +2432,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 2,713,018.22) exceed sanctioned budget (Rs. 1,871,047.05).",
+      "message": "Cumulative payments (₹ 27,13,018.22) exceed sanctioned budget (₹ 18,71,047.05).",
       "invalid_value": "2713018.22",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 1,871,047.05)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 18,71,047.05)"
     },
     {
       "issue_id": "ISSUE-ROW8095-1",
@@ -2444,9 +2444,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 3,040,946.61) exceed sanctioned budget (Rs. 2,097,204.56).",
+      "message": "Cumulative payments (₹ 30,40,946.61) exceed sanctioned budget (₹ 20,97,204.56).",
       "invalid_value": "3040946.61",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 2,097,204.56)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 20,97,204.56)"
     },
     {
       "issue_id": "ISSUE-ROW8096-1",
@@ -2504,7 +2504,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -2,664,233.55.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -26,64,233.55.",
       "invalid_value": "-2664233.55",
       "expected_condition": "Amount >= 0.0"
     },
@@ -2660,7 +2660,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,343,337.57.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -13,43,337.57.",
       "invalid_value": "-1343337.57",
       "expected_condition": "Amount >= 0.0"
     },
@@ -2768,9 +2768,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 3,018,823.31) exceed sanctioned budget (Rs. 2,081,947.11).",
+      "message": "Cumulative payments (₹ 30,18,823.31) exceed sanctioned budget (₹ 20,81,947.11).",
       "invalid_value": "3018823.31",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 2,081,947.11)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 20,81,947.11)"
     },
     {
       "issue_id": "ISSUE-ROW9025-1",
@@ -2792,9 +2792,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 1,376,583.63) exceed sanctioned budget (Rs. 949,368.02).",
+      "message": "Cumulative payments (₹ 13,76,583.63) exceed sanctioned budget (₹ 9,49,368.02).",
       "invalid_value": "1376583.63",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 949,368.02)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 9,49,368.02)"
     },
     {
       "issue_id": "ISSUE-ROW9142-1",
@@ -2864,9 +2864,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 835,987.57) exceed sanctioned budget (Rs. 576,543.15).",
+      "message": "Cumulative payments (₹ 8,35,987.57) exceed sanctioned budget (₹ 5,76,543.15).",
       "invalid_value": "835987.57",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 576,543.15)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 5,76,543.15)"
     },
     {
       "issue_id": "ISSUE-ROW9367-1",
@@ -2888,9 +2888,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 1,072,078.32) exceed sanctioned budget (Rs. 739,364.36).",
+      "message": "Cumulative payments (₹ 10,72,078.32) exceed sanctioned budget (₹ 7,39,364.36).",
       "invalid_value": "1072078.32",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 739,364.36)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 7,39,364.36)"
     },
     {
       "issue_id": "ISSUE-ROW9395-1",
@@ -3032,9 +3032,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 2,444,522.46) exceed sanctioned budget (Rs. 1,685,877.56).",
+      "message": "Cumulative payments (₹ 24,44,522.46) exceed sanctioned budget (₹ 16,85,877.56).",
       "invalid_value": "2444522.46",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 1,685,877.56)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 16,85,877.56)"
     },
     {
       "issue_id": "ISSUE-ROW9769-1",
@@ -3080,9 +3080,9 @@
       "issue_category": "COMPLIANCE_RULE_VIOLATION",
       "rule_code": "RULE_PAYMENTS_EXCEED_SANCTION",
       "severity": "ERROR",
-      "message": "Cumulative payments (Rs. 1,172,328.02) exceed sanctioned budget (Rs. 808,502.08).",
+      "message": "Cumulative payments (₹ 11,72,328.02) exceed sanctioned budget (₹ 8,08,502.08).",
       "invalid_value": "1172328.02",
-      "expected_condition": "Cumulative payments <= sanctioned amount (Rs. 808,502.08)"
+      "expected_condition": "Cumulative payments <= sanctioned amount (₹ 8,08,502.08)"
     },
     {
       "issue_id": "ISSUE-ROW9871-1",
@@ -3116,7 +3116,7 @@
       "issue_category": "DATA_QUALITY_ISSUE",
       "rule_code": "DQ_NEGATIVE_AMOUNT",
       "severity": "ERROR",
-      "message": "Financial field 'sanctioned_amount' contains negative amount: Rs. -1,564,152.37.",
+      "message": "Financial field 'sanctioned_amount' contains negative amount: ₹ -15,64,152.37.",
       "invalid_value": "-1564152.37",
       "expected_condition": "Amount >= 0.0"
     }
