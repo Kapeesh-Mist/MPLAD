@@ -1,0 +1,32 @@
+{
+  "validation_report_version": "1.0.0",
+  "synthetic_demo_data": true,
+  "metadata": {
+    "batch_id": "BATCH-20260902-094447",
+    "source_filename": "clean_mplads_demo.csv",
+    "generated_at": "2026-09-02T09:44:47Z",
+    "status": "PASSED"
+  },
+  "summary": {
+    "total_records": 10000,
+    "valid_records": 10000,
+    "invalid_records": 0,
+    "total_issues": 0,
+    "data_quality_score_pct": 100.0,
+    "issues_by_severity": {
+      "CRITICAL": 0,
+      "ERROR": 0,
+      "WARNING": 0,
+      "INFO": 0
+    },
+    "issues_by_category": {
+      "DATA_QUALITY_ISSUE": 0,
+      "COMPLIANCE_RULE_VIOLATION": 0,
+      "SUSPICIOUS_ANOMALY": 0
+    }
+  },
+  "rule_breakdown": [],
+  "issues_sample": [],
+  "total_issues_sampled": 0,
+  "total_issues_omitted": 0
+}
